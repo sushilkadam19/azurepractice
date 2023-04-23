@@ -1,0 +1,12 @@
+name: 'Terraform'
+on: 
+ push:
+  branches: 
+   - Main
+ pull_request:
+jobs:
+  terraform:
+   name: 'terraform'
+   env:
+      ARM_CLIENT_ID: ${{secret.}}
+  
