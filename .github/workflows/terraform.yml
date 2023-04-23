@@ -5,7 +5,8 @@ on:
       - "Main"
   pull_request:
 jobs:
-    terraform:
-      name: "Terraform"
-    env:
-     ARM_CLIENT_ID: ${{secret.az}}
+  terraform:
+    name: "Terraform"
+  env:
+   ARM_CLIENT_ID: ${{secret.AZURE_CLIENT_ID}}
+   ARM_CLIENT_SECRET: ${{secret.}}
