@@ -2,7 +2,7 @@ name: 'Terraform'
 on: 
   push:
     branches: 
-    - Main
+    - Master
   pull_request:
 jobs:
   terraform:
