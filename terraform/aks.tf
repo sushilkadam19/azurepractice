@@ -1,4 +1,4 @@
-data "azurerm_resouse_group" "RG" {
+data "azurerm_resource_group" "RG" {
     resource_group_name= "RG-CIGH-0"
 }
 
