@@ -1,6 +1,6 @@
 data "azurerm_resource_group" "RG" {
   name = "RG-CIGH-0"
-  location ="Central India"
+  #location ="Central India"
 }
 
 resource "azurerm_container_registry" "acr01" {
