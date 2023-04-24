@@ -3,6 +3,7 @@ name: 'Terraform'
 on:
   push:
     branches: [ "master" ]
+  commit_comment:  [ "master" ]
   pull_request:
   workflow_dispatch:
 
