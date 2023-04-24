@@ -4,7 +4,7 @@ data "azurerm_resource_group" "RG" {
 }
 
 resource "azurerm_container_registry" "acr01practice01" {
-    name = "acr01"
+    name = "acr01practice01"
     resource_group_name = data.azurerm_resource_group.RG.name
     location = data.azurerm_resource_group.RG.location
     sku = "Premium"
@@ -32,6 +32,6 @@ resource "azurerm_kubernetes_cluster" "aks01" {
 resource "azurerm_role_assignment" "aksras" {
   principal_id                     = azurerm_kubernetes_cluster.aks01.kubelet_identity[0].object_id
   role_definition_name             = "AcrPull"
-  scope                            = azurerm_container_registry.acr01.id
+  scope                            = azurerm_container_registry.acr01practice01.id
   skip_service_principal_aad_check = true
 }
