@@ -23,7 +23,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./Terraform
+        working-directory: /home/runner/work/azurepractice/azurepractice/Terraform
 
     steps:
     # Checkout the repository to the GitHub Actions runner
