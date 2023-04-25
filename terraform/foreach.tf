@@ -6,7 +6,7 @@ variable "resourcegroup" {
 
 variable "rglocation" {
     type = string
-    location = "Central India"
+    name = "Central India"
 }
 
 resource "azurerm_resource_group" "RG01" {
