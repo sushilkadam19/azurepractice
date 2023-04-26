@@ -1,4 +1,3 @@
-/*
 data "azurerm_resource_group" "RG" {
   name = "RG-CIGH-0"
   #location ="Central India"
@@ -36,5 +35,3 @@ resource "azurerm_role_assignment" "aksras" {
   scope                            = azurerm_container_registry.acr01practice01.id
   skip_service_principal_aad_check = true
 }
-
-*/
