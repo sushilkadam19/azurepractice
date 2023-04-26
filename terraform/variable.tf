@@ -12,7 +12,7 @@ variable "acrsku" {
   
 }
 
-variable "aks_name_dns_prefix " {
+variable "aks_name_dns_prefix" {
     description = "Azure Container Registery"
     type = string
     default = "aks01"
