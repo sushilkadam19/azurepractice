@@ -1,4 +1,5 @@
-AKS_ACR ={
+
+/*AKS_ACR ={
       "one" = {
         aks_name        =  "AKS01"
         aks_node_count = 1
@@ -26,4 +27,4 @@ AKS_ACR ={
         acr_sku        = "Premium"
       }     
 }
-
+*/
