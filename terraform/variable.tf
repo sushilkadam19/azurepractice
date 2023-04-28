@@ -11,6 +11,7 @@ variable "AKS_ACR" {
   }
   ))
   default = {
+    /*
     "one" = {
     aks_name        =  "AKS01"
     aks_node_count = 1
@@ -36,7 +37,7 @@ variable "AKS_ACR" {
     }
     acr_name       = "acr02practice02"
     acr_sku        = "Premium"
-    }
+    } */
   }
 }
 
