@@ -13,7 +13,7 @@ resource "azurerm_container_registry" "acr01practice01" {
 
 }
 resource "azurerm_kubernetes_cluster" "aks01" {
-    //for_each = var.AKS_ACR
+    for_each = var.AKS_ACR
     name = each.value["aks_name"] 
     location = data.azurerm_resource_group.RG.location
     resource_group_name = data.azurerm_resource_group.RG.name
