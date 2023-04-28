@@ -1,5 +1,5 @@
 variable "AKS_ACR" {
-  type = map(object(
+  type = map(object({
     aks_name       = string
     aks_node_count = number
     aks_dns_prefix = string
@@ -8,6 +8,7 @@ variable "AKS_ACR" {
     tags           = map(string)
     acr_name       = string
     acr_sku        = string
+  }
   ))
   default = {
     "one" = {
