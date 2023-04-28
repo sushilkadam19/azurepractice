@@ -1,3 +1,5 @@
+
+/*
 variable "acr" {
     description = "Azure Container Registery"
     type = string
@@ -42,3 +44,4 @@ variable "environment" {
   type = string
   default = "production"
 }
+ */
