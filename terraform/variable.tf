@@ -10,21 +10,7 @@ variable "AKS_ACR" {
     acr_sku        = string
   }
   ))
-  default = { 
-     "three" = {
-        aks_name        =  "AKS03"
-        aks_node_count = 1
-        aks_dns_prefix = "AKS03"
-        aks_vm_size    = "Standard_D2_v2"
-        identity       = "SystemAssigned"
-        tags           = {
-          "Dept" = "IT"
-          "Env"  = "Dev"
-        }
-        acr_name       = "acr03practice03"
-        acr_sku        = "Premium"
-        }
-  }
+  default = {}
 }
 
 
