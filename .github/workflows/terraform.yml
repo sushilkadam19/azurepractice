@@ -49,7 +49,7 @@ jobs:
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
-      run: terraform plan --chdir=/home/runner/work/azurepractice/azurepractice/tfvars/ --var-file=variable.tfvars --input=false
+      run: terraform plan -chdir=/home/runner/work/azurepractice/azurepractice/tfvars/ --var-file=variable.tfvars --input=false
         #cd /home/runner/work/azurepractice/azurepractice/tfvars/
        # terraform plan -var-file=variable.tfvars -input=false
       # terraform plan -chdir=/home/runner/work/azurepractice/azurepractice/terraform/ -var-file=/home/runner/work/azurepractice/azurepractice/tfvars/variable.tfvars -input=false
@@ -58,7 +58,7 @@ jobs:
       # Note: It is recommended to set up a required "strict" status check in your repository for "Terraform Cloud". See the documentation on "strict" required status checks for more information: https://help.github.com/en/github/administering-a-repository/types-of-required-status-checks
     - name: Terraform Apply
       #if: github.ref == 'refs/heads/"master"' && github.event_name == 'commit & push' 
-      run: terraform apply --chdir=/home/runner/work/azurepractice/azurepractice/tfvars/ --var-file=variable.tfvars --auto-approve --input=false
+      run: terraform apply -chdir=/home/runner/work/azurepractice/azurepractice/tfvars/ --var-file=variable.tfvars --auto-approve --input=false
        # cd /home/runner/work/azurepractice/azurepractice/tfvars/
       #  terraform apply -var-file=variable.tfvars -auto-approve -input=false
       #terraform apply -chdir=/home/runner/work/azurepractice/azurepractice/terraform/ -var-file=/home/runner/work/azurepractice/azurepractice/tfvars/variable.tfvars -auto-approve -input=false
