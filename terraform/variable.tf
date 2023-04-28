@@ -10,7 +10,7 @@ variable "AKS_ACR" {
     acr_sku        = string
   }
   ))
-  default = {}
+  //default = {}
 }
 
 
