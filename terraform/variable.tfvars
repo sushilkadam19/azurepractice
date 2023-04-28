@@ -1,5 +1,5 @@
 AKS_ACR = { 
-          "one" = {
+        "one" = {
         aks_name        =  "AKS01"
         aks_node_count = 1
         aks_dns_prefix = "AKS01"
