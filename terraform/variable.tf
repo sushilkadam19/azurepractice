@@ -13,7 +13,7 @@ variable "AKS_ACR" {
     "one" = {
     aks_name        =  "AKS01"
     aks_node_count = 1
-    aks_dns_prefix = AKS01
+    aks_dns_prefix = "AKS01"
     aks_vm_size    = "Standard_D2_v2"
     identity       = "SystemAssigned"
     tags           = {
