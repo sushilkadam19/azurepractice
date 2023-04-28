@@ -44,7 +44,7 @@ resource "azurerm_role_assignment" "aksras" {
 output "aks_principal_ids" {
   for_each = var.AKS_ACR
   //value = { for key, value in azurerm_kubernetes_cluster.aks01 : key => value.identity[0].principal_id }
-  value = azurerm_role_assignment.aksras[each.key].identity[0].principal_id
+  value = azurerm_role_assignment.aksras.identity[*].principal_id
 }
 
 
