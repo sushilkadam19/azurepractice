@@ -25,7 +25,7 @@ resource "azurerm_kubernetes_cluster" "aks01" {
       vm_size =  each.value["aks_vm_size"]
     }
     identity {
-      type = each.value["aks_identity"]
+      type = each.value["identity"]
     }
     tags = {
     Environment = each.value["tags"]
