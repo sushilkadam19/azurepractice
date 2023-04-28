@@ -27,9 +27,7 @@ resource "azurerm_kubernetes_cluster" "aks01" {
     identity {
       type = each.value["identity"]
     }
-    tags = {
-    Environment = each.value["tags"]
-  }
+    tags = each.value["tags"]
   
 }
 
