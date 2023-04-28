@@ -11,7 +11,7 @@ variable "AKS_ACR" {
   }
   ))
   default = {
-    "one" = {
+    1 = {
     aks_name        =  "AKS01"
     aks_node_count = 1
     aks_dns_prefix = "AKS01"
@@ -24,7 +24,7 @@ variable "AKS_ACR" {
     acr_name       = "acr01practice01"
     acr_sku        = "Premium"
     }
-   "two" = {
+   2 = {
     aks_name        =  "AKS02"
     aks_node_count = 1
     aks_dns_prefix = "AKS02"
