@@ -4,33 +4,37 @@ data "azurerm_resource_group" "RG" {
   #location ="Central India"
 }
 
-/*
+
 resource "azurerm_container_registry" "acr01practice01" {
-    name = var.acr
+    for_each = var.AKS_ACR
+    name = each.value["acr_name"]
     resource_group_name = data.azurerm_resource_group.RG.name
     location = data.azurerm_resource_group.RG.location
-    sku = var.acrsku
+    sku = each.value["acr_sku"]
 
 }
 resource "azurerm_kubernetes_cluster" "aks01" {
-    name = var.aks_name_dns_prefix 
+    for_each = var.AKS_ACR
+    name = each.value["aks_name"] 
     location = data.azurerm_resource_group.RG.location
     resource_group_name = data.azurerm_resource_group.RG.name
-    dns_prefix = var.aks_name_dns_prefix 
+    dns_prefix = each.value["aks_dns_prefix"]
 
     default_node_pool {
       name = "default"
-      node_count = var.default_node_pool_count
-      vm_size =  var.default_node_pool_vm_size
+      node_count = each.value["aks_node_count"]
+      vm_size =  each.value["aks_vm_size"]
     }
     identity {
-      type = var.aks_identity
+      type = each.value["aks_identity"]
     }
     tags = {
-    Environment = var.environment
+    Environment = each.value["tags"]
   }
   
 }
+
+/*
 resource "azurerm_role_assignment" "aksras" {
   principal_id                     = azurerm_kubernetes_cluster.aks01.kubelet_identity[0].object_id
   role_definition_name             = "AcrPull"

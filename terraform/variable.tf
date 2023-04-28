@@ -1,3 +1,34 @@
+variable "AKS_ACR" {
+  type = map(object(
+    aks_name       = string
+    aks_node_count = number
+    aks_dns_prefix = string
+    aks_vm_size    = string
+    identity       = string
+    tags           = map(string)
+    acr_name       = string
+    acr_sku        = string
+  ))
+  default = {
+    "one" = {
+    aks_name        =  "AKS01"
+    aks_node_count = 1
+    aks_dns_prefix = AKS01
+    aks_vm_size    = "Standard_D2_v2"
+    identity       = "SystemAssigned"
+    tags           = {
+      "Dept" = "IT"
+      "Env"  = "Dev"
+    }
+    acr_name       = "acr01practice01"
+    acr_sku        = "Premium"
+    }
+  }
+}
+
+
+
+
 
 /*
 variable "acr" {
