@@ -34,9 +34,9 @@ resource "azurerm_kubernetes_cluster" "aks01" {
 
 resource "azurerm_role_assignment" "aksras" {
   //principal_id                     = azurerm_kubernetes_cluster.aks01.kubelet_identity[each.AKS01].object_id
-  principal_id                     = azurerm_kubernetes_cluster.aks01[each.AKS01].object_id
+  principal_id                     = azurerm_kubernetes_cluster.aks01[each.key].object_id
   role_definition_name             = "AcrPull"
-  scope                            = azurerm_container_registry.acr01practice01[each.acr01practice01].id
+  scope                            = azurerm_container_registry.acr01practice01[each.key].id
   skip_service_principal_aad_check = true
 }
 
