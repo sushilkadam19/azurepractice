@@ -41,4 +41,9 @@ resource "azurerm_role_assignment" "aksras" {
   skip_service_principal_aad_check = true
 }
 
+output "aks_principal_ids" {
+  value = { for key, value in azurerm_kubernetes_cluster.aks01 : key => value.identity[0].principal_id }
+}
+
+
 
