@@ -39,7 +39,8 @@ resource "azurerm_network_security_group" "nsg01" {
               source_application_security_group_ids      = []
               source_port_range                          = "*"
               source_port_ranges                         = []
-            } ]
+            },
+        ]
 
 }
 
