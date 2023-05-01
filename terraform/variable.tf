@@ -17,7 +17,7 @@ variable "testrg-count" {
 
   description = "RG variable for count practice"
   type = list(string)
-  default = {}
+  default = []
 }
 
 
