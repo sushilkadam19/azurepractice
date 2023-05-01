@@ -24,7 +24,6 @@ resource "azurerm_network_security_group" "nsg01" {
             },
             {
               access                                     = "Allow"
-              description                                = ""
               destination_address_prefix                 = "*"
               destination_port_range                     = "3389"
               direction                                  = "Inbound"
