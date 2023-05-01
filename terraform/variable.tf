@@ -20,6 +20,11 @@ variable "testrg-count" {
   default = []
 }
 
+variable "nsgname" {
+  type = "string"
+      
+}
+
 
 
 /*
