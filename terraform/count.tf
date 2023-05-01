@@ -22,7 +22,7 @@ resource "azurerm_network_security_group" "nsg01" {
                 source_address_prefix      = "*"
                 destination_address_prefix = "*"
             },
-            {
+            /*{
               access                                     = "Allow"
               destination_address_prefix                 = "*"
               destination_port_range                     = "3389"
@@ -33,7 +33,7 @@ resource "azurerm_network_security_group" "nsg01" {
               source_address_prefix                      = "*"
               source_port_range                          = "*"
              
-            },
+            },*/
         ]
 
 }
