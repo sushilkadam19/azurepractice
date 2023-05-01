@@ -11,7 +11,7 @@ resource "azurerm_network_security_group" "nsg01" {
     resource_group_name = azurerm_resource_group.testrg-count[1].name
 
     security_rule = [
-            {
+            /*{
                 name                       = "test123"
                 priority                   = 160
                 direction                  = "Inbound"
@@ -21,8 +21,8 @@ resource "azurerm_network_security_group" "nsg01" {
                 destination_port_range     = "3330"
                 source_address_prefix      = "*"
                 destination_address_prefix = "*"
-            },
-            /*{
+            }, */
+            {
               access                                     = "Allow"
               destination_address_prefix                 = "*"
               destination_port_range                     = "3389"
@@ -33,7 +33,7 @@ resource "azurerm_network_security_group" "nsg01" {
               source_address_prefix                      = "*"
               source_port_range                          = "*"
              
-            },*/
+            },
         ]
 
 }
