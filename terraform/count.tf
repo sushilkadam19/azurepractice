@@ -7,13 +7,13 @@ resource "azurerm_resource_group" "testrg-count" {
 
 resource "azurerm_network_security_group" "nsg01" {
     name = "nsg01"
-    location = azurerm_resource_group.testrg-count.location
+    location = azurerm_resource_group.testrg-count[1].location
     resource_group_name = azurerm_resource_group.testrg-count[1].name
 }
 
 resource "azurerm_virtual_network" "vnet01" {
     name = "vnet01"
-    location = azurerm_resource_group.testrg-count.location
+    location = azurerm_resource_group.testrg-count[1].location
     resource_group_name = azurerm_resource_group.testrg-count[1].name
     address_space = ["10.0.0.0/16"]
     //dns_servers = 
