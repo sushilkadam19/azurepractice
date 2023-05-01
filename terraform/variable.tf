@@ -21,8 +21,8 @@ variable "testrg-count" {
 }
 
 variable "nsgname" {
-  type = "string"
-      
+  type = string
+
 }
 
 
