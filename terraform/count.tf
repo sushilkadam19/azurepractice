@@ -10,17 +10,37 @@ resource "azurerm_network_security_group" "nsg01" {
     location = azurerm_resource_group.testrg-count[1].location
     resource_group_name = azurerm_resource_group.testrg-count[1].name
 
-    security_rule {
-    name                       = "test123"
-    priority                   = 160
-    direction                  = "Inbound"
-    access                     = "Allow"
-    protocol                   = "Tcp"
-    source_port_range          = "*"
-    destination_port_range     = "*"
-    source_address_prefix      = "*"
-    destination_address_prefix = "*"
-  }
+    security_rule = [
+            {
+                name                       = "test123"
+                priority                   = 160
+                direction                  = "Inbound"
+                access                     = "Allow"
+                protocol                   = "Tcp"
+                source_port_range          = "*"
+                destination_port_range     = "*"
+                source_address_prefix      = "*"
+                destination_address_prefix = "*"
+            },
+            {
+              access                                     = "Allow"
+              description                                = ""
+              destination_address_prefix                 = "*"
+              destination_address_prefixes               = []
+              destination_application_security_group_ids = []
+              destination_port_range                     = "3389"
+              destination_port_ranges                    = []
+              direction                                  = "Inbound"
+              name                                       = "rdp"
+              priority                                   = 150
+              protocol                                   = "*"
+              source_address_prefix                      = "*"
+              source_address_prefixes                    = []
+              source_application_security_group_ids      = []
+              source_port_range                          = "*"
+              source_port_ranges                         = []
+            } ]
+
 }
 
 resource "azurerm_virtual_network" "vnet01" {
