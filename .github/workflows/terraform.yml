@@ -55,7 +55,7 @@ jobs:
       # terraform plan -chdir=/home/runner/work/azurepractice/azurepractice/terraform/ -var-file=/home/runner/work/azurepractice/azurepractice/tfvars/variable.tfvars -input=false
     - uses: trstringer/manual-approval@v1
       with:
-        secret: ${{ github.TOKEN }}
+        //secret: ${{ github.TOKEN }}
         approvers: sushilkadam19@yahoo.in
         minimum-approvals: 1
         issue-title: "Deploying v1.3.5 to prod from staging"
