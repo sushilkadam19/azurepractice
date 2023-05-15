@@ -1,7 +1,7 @@
 
 testrg-count = [ "CountRG01","CountRG02", "CountRG03" ]
 nsgname = "nsg01"
-
+/*
 AKS_ACR ={
       "one" = {
         aks_name        =  "AKS01"
@@ -30,3 +30,4 @@ AKS_ACR ={
         acr_sku        = "Premium"
       }     
 }
+*/
